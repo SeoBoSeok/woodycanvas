@@ -1,0 +1,13 @@
+
+*.user
+
+*.pro
+
+*.pyc
+*.jpg
+*.png
+*.jpeg
+src
+src/*
+img
+img/*
