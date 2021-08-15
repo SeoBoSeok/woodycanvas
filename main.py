@@ -9,6 +9,9 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtGui import QPixmap
 from PyQt5.QtCore import Qt, QProcess
 
+# import Opencv module
+import cv2
+
 # This is our window from QtCreator
 import mainwindow_auto
 
@@ -19,7 +22,8 @@ class MainWindow(QMainWindow, mainwindow_auto.Ui_MainWindow):
 		print("Pressed Preview!")
 		myPixmap = QPixmap('/home/pi/woodycanvas/img/image.jpg')
 		myScaledPixmap = myPixmap.scaled(self.lblCamView.size(), Qt.KeepAspectRatio)
-		self.lblCamView.setPixmap(myScaledPixmap)
+		# self.lblCamView.setPixmap(myScaledPixmap)
+		self.viewCam()
 
 	def pressedSnapButton(self):
 		print("Pressed Snap")
@@ -53,6 +57,39 @@ class MainWindow(QMainWindow, mainwindow_auto.Ui_MainWindow):
             #output = p.read()
             #self.editorOutput.insertPlainText(output)
 
+	# view camera
+	def viewCam(self):
+			self.cap = cv2.VideoCapture(0)
+			# read image in BGR format
+			ret, image = self.cap.read()
+			# convert image to RGB format
+			image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+			# get image infos
+			height, width, channel = image.shape
+			step = channel * width
+			# create QImage from image
+			qImg = QImage(image.data, width, height, step, QImage.Format_RGB888)
+			# show image in img_label
+			# self.ui.image_label.setPixmap(QPixmap.fromImage(qImg))
+			self.lblCamView.setPixmap(QPixmap.fromImage(qImg))
+	# start/stop timer
+	def controlTimer(self):
+			# if timer is stopped
+			if not self.timer.isActive():
+					# create video capture
+					self.cap = cv2.VideoCapture(0)
+					# start timer
+					self.timer.start(20)
+					# update control_bt text
+					self.ui.control_bt.setText("Stop")
+			# if timer is started
+			else:
+					# stop timer
+					self.timer.stop()
+					# release video capture
+					self.cap.release()
+					# update control_bt text
+					self.ui.control_bt.setText("Start")
 
 	def __init__(self):
 		super(self.__class__, self).__init__()
