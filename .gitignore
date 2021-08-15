@@ -11,3 +11,12 @@ src
 src/*
 img
 img/*
+
+bin
+bin/*
+lib
+lib/*
+
+include
+include/*
+pyvenv.cfg
