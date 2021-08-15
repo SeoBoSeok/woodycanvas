@@ -7,8 +7,7 @@ from time import sleep
 import PyQt5
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import QPixmap, QImage
-from PyQt5.QtCore import Qt, QProcess
-from PyQt5.QtCore import QTimer
+from PyQt5.QtCore import Qt, QProcess, QTimer
 
 # import Opencv module
 import cv2
@@ -24,7 +23,8 @@ class MainWindow(QMainWindow, mainwindow_auto.Ui_MainWindow):
 		myPixmap = QPixmap('/home/pi/woodycanvas/img/image.jpg')
 		myScaledPixmap = myPixmap.scaled(self.lblCamView.size(), Qt.KeepAspectRatio)
 		# self.lblCamView.setPixmap(myScaledPixmap)
-		self.viewCam()
+		# self.viewCam()
+		self.controlTimer()
 
 	def pressedSnapButton(self):
 		print("Pressed Snap")
@@ -84,7 +84,7 @@ class MainWindow(QMainWindow, mainwindow_auto.Ui_MainWindow):
 					# start timer
 					self.timer.start(20)
 					# update control_bt text
-					self.ui.control_bt.setText("Stop")
+					# self.ui.control_bt.setText("Stop")
 			# if timer is started
 			else:
 					# stop timer
@@ -92,7 +92,7 @@ class MainWindow(QMainWindow, mainwindow_auto.Ui_MainWindow):
 					# release video capture
 					self.cap.release()
 					# update control_bt text
-					self.ui.control_bt.setText("Start")
+					# self.ui.control_bt.setText("Start")
 
 	def __init__(self):
 		super(self.__class__, self).__init__()
