@@ -96,6 +96,10 @@ class MainWindow(QMainWindow, mainwindow_auto.Ui_MainWindow):
 		super(self.__class__, self).__init__()
 		self.setupUi(self) # gets defined in the UI file
 
+		# create a timer
+		self.timer = QTimer()
+		# set timer timeout callback function
+		self.timer.timeout.connect(self.viewCam)  
 
 		# Tie buttons to clicks
 		self.btnSnap.clicked.connect(lambda: self.pressedSnapButton())
