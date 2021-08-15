@@ -43,6 +43,8 @@ class MainWindow(QMainWindow, mainwindow_auto.Ui_MainWindow):
 		self.p.start("rsync",  ["-azvh", "/home/pi/test/picam/img/image.jpg", "/home/pi/pi-camera-stream-flask/static/"])
 		self.p.waitForFinished()
 		print("async End")
+  
+		self.pressedPreviewButton()
 	#def runCommand(self):
         #pass
         #p = os.popen(command)
