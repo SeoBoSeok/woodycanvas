@@ -17,7 +17,7 @@ class MainWindow(QMainWindow, mainwindow_auto.Ui_MainWindow):
 # access variables inside of the UI's file
 	def pressedPreviewButton(self):
 		print("Pressed Preview!")
-		myPixmap = QPixmap('/home/pi/picam/img/image.jpg')
+		myPixmap = QPixmap('/home/pi/woodycanvas/img/image.jpg')
 		myScaledPixmap = myPixmap.scaled(self.lblCamView.size(), Qt.KeepAspectRatio)
 		self.lblCamView.setPixmap(myScaledPixmap)
 
