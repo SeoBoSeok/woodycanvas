@@ -61,6 +61,8 @@ class MainWindow(QMainWindow, mainwindow_auto.Ui_MainWindow):
 	# view camera
 	def viewCam(self):
 			self.cap = cv2.VideoCapture(0)
+   		# start timer
+			self.timer.start(20)
 			# read image in BGR format
 			ret, image = self.cap.read()
 			# convert image to RGB format
