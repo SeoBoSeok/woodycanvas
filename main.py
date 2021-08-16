@@ -6,7 +6,7 @@ from time import sleep
 # This gets the Qt stuff
 import PyQt5
 from PyQt5.QtWidgets import *
-from PyQt5.QtGui import QPixmap, QImage
+from PyQt5.QtGui import QPixmap, QImage, QLinearGradient
 from PyQt5.QtCore import Qt, QProcess, QTimer
 
 # import Opencv module
@@ -23,11 +23,13 @@ class SplashScreen(QWidget):
     self.setFixedSize(1100, 500)
     self.setAttribute(Qt.WA_TranslucentBackground)
     
-    self.count = 0
+    self.counter = 0
     self.n = 300
     
     self.initUI()
     self.timer = QTimer()
+    self.timer.timeout.connect(self.loading)
+    self.timer.start(30)
     
   def initUI(self):
     layout = QVBoxLayout()
@@ -66,6 +68,19 @@ class SplashScreen(QWidget):
     self.labelLoading.setObjectName("LabelLoading")
     self.labelLoading.setAlignment(Qt.AlignCenter)
     self.labelLoading.setText('loading...')
+  
+  def loading(self):
+    self.progressBar.setValue(self.counter)
+    if self.counter == int(self.n * 0.3):
+      self.labelDescription.setText('<strong>Working on Woody Camera #2</strong>')
+    elif self.counter == int(self.n * 0.6):
+      self.labelDescription.setText('<strong>Working on Woody Interface #3</strong>')
+    elif self.counter >= self.n:
+    	self.timer.stop()
+     	self.close()
+		
+  	sleep(1)
+   	self.counter += 1
     
   
 # create class for our Raspberry Pi GUI
@@ -186,9 +201,28 @@ def main():
 			color: #c2ced1;
 		}
   
+		#LoadingLabel {
+			font-size: 30px;
+			color: #c2ced1;
+		}
+  
 		QFrame {
 			background-color: #2F4454;
 			color: rgb(220, 220, 220);
+		}
+  
+		QProgressBar {
+			backgrond-color: #DA7B93;
+			color: rgb(200, 200, 200);
+			border-style: none;
+			border-radius: 10px;
+			text-align: center;
+			font-size: 30px;
+		}
+  
+		QProgresBar::chunk {
+			border-radius: 10px;
+			background-color: qlineargradient(spread:pad x1:0, x2:1, y1:0.511364, y2:0.523, stop:0 #1c3334, stop:1 #376E6F)
 		}
 	''')
   
