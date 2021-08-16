@@ -22,7 +22,7 @@ class MainWindow(QMainWindow, mainwindow_auto.Ui_MainWindow):
 		print("Pressed Preview!")
 		myPixmap = QPixmap('/home/pi/woodycanvas/img/image.jpg')
 		myScaledPixmap = myPixmap.scaled(self.lblCamView.size(), Qt.KeepAspectRatio)
-		# self.lblCamView.setPixmap(myScaledPixmap)
+		self.lblCamView.setPixmap(myScaledPixmap)
 		# self.viewCam()
 		# self.controlTimer()
 
@@ -32,6 +32,7 @@ class MainWindow(QMainWindow, mainwindow_auto.Ui_MainWindow):
 
 	def pressedSettingsButton(self):
 		print("Settings pressed")
+		self.pressedPreviewButton()
 		#self.lblCamView.clear()
 		#self.runCommand("raspistill -t 2000 -o image.jpg")
 		#os.system("raspistill -t 2000 -o image.jpg");
@@ -45,11 +46,12 @@ class MainWindow(QMainWindow, mainwindow_auto.Ui_MainWindow):
 		self.p.start("python3",  ["merge.py"])
 		self.p.waitForFinished()
 		print("merge end")
-		self.p.start("rsync",  ["-azvh", "/home/pi/test/picam/img/image.jpg", "/home/pi/pi-camera-stream-flask/static/"])
+		self.p.start("rsync",  ["-azvh", "/home/pi/picam/img/image.jpg", "/home/pi/pi-camera-stream-flask/static/"])
 		self.p.waitForFinished()
 		print("async End")
   
-		self.pressedPreviewButton()
+		# self.pressedPreviewButton()
+		self.controlTimer()
 	#def runCommand(self):
         #pass
         #p = os.popen(command)
