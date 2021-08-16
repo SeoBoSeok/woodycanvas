@@ -85,7 +85,7 @@ class SplashScreen(QWidget):
       
       # sleep(1)
    	
-    self.counter += 1
+    self.counter += 2
     
     
   
