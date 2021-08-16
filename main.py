@@ -164,7 +164,7 @@ class MainWindow(QMainWindow, mainwindow_auto.Ui_MainWindow):
 					# start timer
 					self.timer.start(20)
 					# update control_bt text
-					self.btnSnap.setText("stop")
+					# self.btnSnap.setText("stop")
 					# self.ui.control_bt.setText("Stop")
 			# if timer is started
 			else:
