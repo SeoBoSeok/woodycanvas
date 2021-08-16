@@ -82,7 +82,7 @@ class MainWindow(QMainWindow, mainwindow_auto.Ui_MainWindow):
 			self.lblCamView.setPixmap(QPixmap.fromImage(qImg))
 	# start/stop timer
 	def controlTimer(self):
-			self.lblCamView.clear()
+			# self.lblCamView.clear()
 			# if timer is stopped
 			if not self.timer.isActive():
 					# create video capture
