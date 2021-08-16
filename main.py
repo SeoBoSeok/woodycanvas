@@ -78,12 +78,12 @@ class SplashScreen(QWidget):
       self.labelDescription.setText('<strong>Working on Woody Interface #3</strong>')
     elif self.counter >= self.n:
       self.timer.stop()
-      self.close()
-      
-      sleep(1)
-      
       self.form = MainWindow()
       self.form.show()
+      
+      self.close()
+      
+      # sleep(1)
    	
     self.counter += 1
     
