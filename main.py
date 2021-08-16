@@ -21,10 +21,11 @@ class SplashScreen(QWidget):
     super().__init__()
     self.setWindowTitle("WOODY CANVAS")
     self.setFixedSize(1100, 500)
+    self.setWindowFlag(Qt.FramelessWindowHint)
     self.setAttribute(Qt.WA_TranslucentBackground)
     
     self.counter = 0
-    self.n = 300
+    self.n = 30
     
     self.initUI()
     self.timer = QTimer()
