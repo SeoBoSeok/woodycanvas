@@ -98,7 +98,7 @@ class MainWindow(QMainWindow, mainwindow_auto.Ui_MainWindow):
 					self.cap.release()
 					# update control_bt text
 					# self.ui.control_bt.setText("Start")
-
+					self.lblCamView.clear()
 	def __init__(self):
 		super(self.__class__, self).__init__()
 		self.setupUi(self) # gets defined in the UI file
