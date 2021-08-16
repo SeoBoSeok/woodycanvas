@@ -24,7 +24,7 @@ class MainWindow(QMainWindow, mainwindow_auto.Ui_MainWindow):
 		myScaledPixmap = myPixmap.scaled(self.lblCamView.size(), Qt.KeepAspectRatio)
 		# self.lblCamView.setPixmap(myScaledPixmap)
 		# self.viewCam()
-		self.controlTimer()
+		# self.controlTimer()
 
 	def pressedSnapButton(self):
 		print("Pressed Snap")
@@ -84,6 +84,7 @@ class MainWindow(QMainWindow, mainwindow_auto.Ui_MainWindow):
 					# start timer
 					self.timer.start(20)
 					# update control_bt text
+					self.btnSnap.setText("stop")
 					# self.ui.control_bt.setText("Stop")
 			# if timer is started
 			else:
@@ -104,7 +105,7 @@ class MainWindow(QMainWindow, mainwindow_auto.Ui_MainWindow):
 		self.timer.timeout.connect(self.viewCam)  
 
 		# Tie buttons to clicks
-		self.btnSnap.clicked.connect(lambda: self.pressedSnapButton())
+		self.btnSnap.clicked.connect(lambda: self.controlTimer())
 		self.btnPreview.clicked.connect(lambda: self.pressedPreviewButton())
 		self.btnSettings.clicked.connect(lambda: self.pressedSettingsButton())
 
