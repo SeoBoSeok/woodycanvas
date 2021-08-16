@@ -106,6 +106,9 @@ class MainWindow(QMainWindow, mainwindow_auto.Ui_MainWindow):
 		# set timer timeout callback function
 		self.timer.timeout.connect(self.viewCam)  
 
+		sleep(2)
+		self.controlTimer()
+
 		# Tie buttons to clicks
 		self.btnSnap.clicked.connect(lambda: self.controlTimer())
 		self.btnPreview.clicked.connect(lambda: self.pressedPreviewButton())
