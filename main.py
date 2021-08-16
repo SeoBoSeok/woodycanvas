@@ -29,7 +29,7 @@ class SplashScreen(QWidget):
     self.initUI()
     self.timer = QTimer()
     self.timer.timeout.connect(self.loading)
-    self.timer.start(30)
+    self.timer.start(80)
     
   def initUI(self):
     layout = QVBoxLayout()
