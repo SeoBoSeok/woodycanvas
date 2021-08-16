@@ -32,6 +32,11 @@ class Ui_MainWindow(object):
         self.horizontalLayout.addWidget(self.btnPreview)
         self.btnSnap = QtWidgets.QPushButton(self.horizontalLayoutWidget)
         self.btnSnap.setObjectName("btnSnap")
+        self.btnSnap.setStyleSheet("color: white;"
+                        "background-color: rgba(0,0,0,0.3);"
+                        "border: 1px solid white;"
+                        "font-size: 20px;"
+                        )
         self.horizontalLayout.addWidget(self.btnSnap)
         self.horizontalLayoutWidget_2 = QtWidgets.QWidget(self.centralWidget)
         self.horizontalLayoutWidget_2.setGeometry(QtCore.QRect(10, 10, 301, 41))
