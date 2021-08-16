@@ -37,7 +37,8 @@ class Ui_MainWindow(object):
                         "font-size: 20px;"
                         "border-radius: 10px;"
                         )
-        self.btnSnap.setMaximumHeight(50)
+        self.btnSnap.resize(150, 300)
+        self.btnSnap.setMaximumHeight(150)
         self.horizontalLayout.addWidget(self.btnSnap)
         self.horizontalLayoutWidget_2 = QtWidgets.QWidget(self.centralWidget)
         self.horizontalLayoutWidget_2.setGeometry(QtCore.QRect(10, 10, 301, 41))
