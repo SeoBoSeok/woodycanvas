@@ -33,11 +33,9 @@ class Ui_MainWindow(object):
         self.btnSnap = QtWidgets.QPushButton(self.horizontalLayoutWidget)
         self.btnSnap.setObjectName("btnSnap")
         self.btnSnap.setStyleSheet("color: white;"
-                        "background-color: rgba(0,0,0,30);"
-                        "border: 1px solid white;"
+                        "border: 2px solid white;"
                         "font-size: 20px;"
-                        "height: 50px;"
-                        "width: 50px;"
+                        "border-radius: 10px;"
                         )
         self.horizontalLayout.addWidget(self.btnSnap)
         self.horizontalLayoutWidget_2 = QtWidgets.QWidget(self.centralWidget)
@@ -84,7 +82,7 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "WOODY CANVAS"))
-        self.btnPreview.setText(_translate("MainWindow", "Preview"))
+        self.btnPreview.setText(_translate("MainWindow", "PREVIEW"))
         self.btnSnap.setText(_translate("MainWindow", "Snap"))
         self.btnSettings.setText(_translate("MainWindow", "Auto"))
         self.lblTeamName.setText(_translate("MainWindow", "v0.0.1"))
