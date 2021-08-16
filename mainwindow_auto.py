@@ -42,6 +42,11 @@ class Ui_MainWindow(object):
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
         self.btnSettings = QtWidgets.QPushButton(self.horizontalLayoutWidget_2)
         self.btnSettings.setObjectName("btnSettings")
+        self.btnSettings.setStyleSheet("color: blue;"
+                              "background-color: #87CEFA;"
+                              "border-style: dashed;"
+                              "border-width: 3px;"
+                              "border-color: #1E90FF")
         self.horizontalLayout_2.addWidget(self.btnSettings)
         self.lblTeamName = QtWidgets.QLabel(self.horizontalLayoutWidget_2)
         self.lblTeamName.setAlignment(QtCore.Qt.AlignCenter)
