@@ -20,6 +20,7 @@ class MainWindow(QMainWindow, mainwindow_auto.Ui_MainWindow):
 # access variables inside of the UI's file
 	def pressedPreviewButton(self):
 		print("Pressed Preview!")
+		self.lblCamView.clear()
 		myPixmap = QPixmap('/home/pi/woodycanvas/img/image.jpg')
 		myScaledPixmap = myPixmap.scaled(self.lblCamView.size(), Qt.KeepAspectRatio)
 		self.lblCamView.setPixmap(myScaledPixmap)
@@ -79,6 +80,7 @@ class MainWindow(QMainWindow, mainwindow_auto.Ui_MainWindow):
 			self.lblCamView.setPixmap(QPixmap.fromImage(qImg))
 	# start/stop timer
 	def controlTimer(self):
+			self.lblCamView.clear()
 			# if timer is stopped
 			if not self.timer.isActive():
 					# create video capture
