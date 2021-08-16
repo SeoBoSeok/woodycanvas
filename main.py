@@ -15,6 +15,45 @@ import cv2
 # This is our window from QtCreator
 import mainwindow_auto
 
+# Splash Screen
+class SplashScreen(QWidget):
+  def __init__(self) -> None:
+    super().__init__()
+    self.setWindowTitle("WOODY CANVAS")
+    self.setFixedSize(1100, 500)
+    self.setAttribute(Qt.WA_TranslucentBackground)
+    
+    self.count = 0
+    self.n = 300
+    
+    self.initUI()
+    self.timer = QTimer()
+    
+  def initUI(self):
+    layout = QVBoxLayout()
+    self.setLayout(layout)
+    
+    self.frame = QFrame()
+    layout.addWidget(self.frame)
+    
+    self.labelTitle = QLabel(self.frame)
+    self.labelTitle.setObjectName('LabelTitle')
+    
+    self.labelTitle.resize(self.width() - 10, 150)
+    self.labelTitle.move(0, 40) # x, y
+    self.labelTitle.setText("WOODY CANVAS")
+    self.labelTitle.setAlignment(Qt.AlignCenter)
+    
+    self.labelDescription = QLabel(self.frame)
+    self.labelDescription.resize(self.width() - 10, 50)
+    self.labelDescription.move(0, self.labelTitle.height())
+    self.labelDescription.setObjectName("LabelDescription")
+    self.labelDescription.setText("<strong>Loading...</strong>")
+    self.labelDescription.setAlignment(Qt.AlignCenter)
+    
+    self.progressBar = QProgressBar(self.frame)
+    
+  
 # create class for our Raspberry Pi GUI
 class MainWindow(QMainWindow, mainwindow_auto.Ui_MainWindow):
 # access variables inside of the UI's file
@@ -122,6 +161,26 @@ class MainWindow(QMainWindow, mainwindow_auto.Ui_MainWindow):
 def main():
 	# a new app instance
 	app = QApplication(sys.argv)
+	app.setStyleSheet('''
+		#LabelTitle {
+			font-size: 16px;
+			color: #93deed;
+		}
+  
+		#LabelDescription {
+			font-size: 30px;
+			color: #c2ced1;
+		}
+  
+		QFrame {
+			background-color: #2F4454;
+			color: rgb(220, 220, 220);
+		}
+	''')
+  
+	splash = SplashScreen()
+	splash.show()
+		
 	form = MainWindow()
 	form.show()
 	# without this, the script exits immediately.
