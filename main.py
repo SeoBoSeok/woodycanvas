@@ -25,12 +25,12 @@ class SplashScreen(QWidget):
     self.setAttribute(Qt.WA_TranslucentBackground)
     
     self.counter = 0
-    self.n = 200
+    self.n = 300
     
     self.initUI()
     self.timer = QTimer()
     self.timer.timeout.connect(self.loading)
-    self.timer.start(10)
+    self.timer.start(30)
     
   def initUI(self):
     layout = QVBoxLayout()
