@@ -76,11 +76,12 @@ class SplashScreen(QWidget):
     elif self.counter == int(self.n * 0.6):
       self.labelDescription.setText('<strong>Working on Woody Interface #3</strong>')
     elif self.counter >= self.n:
-    	self.timer.stop()
-     	self.close()
-		
-  	sleep(1)
-   	self.counter += 1
+      self.timer.stop()
+      self.close()
+      
+      sleep(1)
+   	
+    self.counter += 1
     
   
 # create class for our Raspberry Pi GUI
