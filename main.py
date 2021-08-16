@@ -25,7 +25,7 @@ class SplashScreen(QWidget):
     self.setAttribute(Qt.WA_TranslucentBackground)
     
     self.counter = 0
-    self.n = 30
+    self.n = 100
     
     self.initUI()
     self.timer = QTimer()
@@ -81,8 +81,12 @@ class SplashScreen(QWidget):
       self.close()
       
       sleep(1)
+      
+      self.form = MainWindow()
+      self.form.show()
    	
     self.counter += 1
+    
     
   
 # create class for our Raspberry Pi GUI
@@ -231,8 +235,8 @@ def main():
 	splash = SplashScreen()
 	splash.show()
 		
-	form = MainWindow()
-	form.show()
+	# form = MainWindow()
+	# form.show()
 	# without this, the script exits immediately.
 	sys.exit(app.exec_())
 
