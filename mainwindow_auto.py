@@ -37,8 +37,8 @@ class Ui_MainWindow(object):
                         "font-size: 20px;"
                         "border-radius: 10px;"
                         )
-        self.btnSnap.resize(150, 300)
-        self.btnSnap.setMaximumHeight(150)
+        # self.btnSnap.resize(150, 150)
+        # self.btnSnap.setMaximumHeight(150)
         self.horizontalLayout.addWidget(self.btnSnap)
         self.horizontalLayoutWidget_2 = QtWidgets.QWidget(self.centralWidget)
         self.horizontalLayoutWidget_2.setGeometry(QtCore.QRect(10, 10, 301, 41))
@@ -49,11 +49,11 @@ class Ui_MainWindow(object):
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
         self.btnSettings = QtWidgets.QPushButton(self.horizontalLayoutWidget_2)
         self.btnSettings.setObjectName("btnSettings")
-        self.btnSettings.setStyleSheet("color: blue;"
-                              "background-color: #87CEFA;"
-                              "border-style: dashed;"
-                              "border-width: 3px;"
-                              "border-color: #1E90FF")
+        # self.btnSettings.setStyleSheet("color: blue;"
+        #                       "background-color: #87CEFA;"
+        #                       "border-style: dashed;"
+        #                       "border-width: 3px;"
+        #                       "border-color: #1E90FF")
         self.horizontalLayout_2.addWidget(self.btnSettings)
         self.lblTeamName = QtWidgets.QLabel(self.horizontalLayoutWidget_2)
         self.lblTeamName.setAlignment(QtCore.Qt.AlignCenter)
