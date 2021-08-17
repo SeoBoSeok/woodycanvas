@@ -95,6 +95,7 @@ class MainWindow(QMainWindow, mainwindow_auto.Ui_MainWindow):
 # access variables inside of the UI's file
 	def pressedPreviewButton(self):
 		print("PreviewButton")
+		self.liveView = False
 		# self.controlTimer()
 		# sleep(1)
 		self.lblCamView.clear()
@@ -110,9 +111,9 @@ class MainWindow(QMainWindow, mainwindow_auto.Ui_MainWindow):
 
 	def pressedSettingsButton(self):
 		print("Auto Settings pressed")
-		self.controlTimer()
+		# self.controlTimer()
 		sleep(1)
-		# self.pressedPreviewButton()
+		self.pressedPreviewButton()
 		#self.lblCamView.clear()
 		#self.runCommand("raspistill -t 2000 -o image.jpg")
 		#os.system("raspistill -t 2000 -o image.jpg");
@@ -184,8 +185,6 @@ class MainWindow(QMainWindow, mainwindow_auto.Ui_MainWindow):
 	def __init__(self):
 		super(self.__class__, self).__init__()
 		self.setupUi(self) # gets defined in the UI file
-  
-		self.liveView = False
 
 		# create a timer
 		self.timer = QTimer()
@@ -193,6 +192,7 @@ class MainWindow(QMainWindow, mainwindow_auto.Ui_MainWindow):
 		self.timer.timeout.connect(self.viewCam)  
 
 		sleep(2)
+		self.liveView = False
 		self.controlTimer()
 
 		# Tie buttons to clicks

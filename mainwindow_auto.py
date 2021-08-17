@@ -85,7 +85,7 @@ class Ui_MainWindow(object):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "WOODY CANVAS"))
         self.btnPreview.setText(_translate("MainWindow", "PREVIEW"))
-        self.btnSnap.setText(_translate("MainWindow", "Snap"))
+        self.btnSnap.setText(_translate("MainWindow", "GO"))
         self.btnSettings.setText(_translate("MainWindow", "Auto"))
         self.lblTeamName.setText(_translate("MainWindow", "v0.0.1"))
 
