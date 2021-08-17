@@ -112,7 +112,7 @@ class MainWindow(QMainWindow, mainwindow_auto.Ui_MainWindow):
 
 	def pressedSettingsButton(self):
 		print("Auto Settings pressed")
-		self.controlTimer()
+		self.pressedPreviewButton()
 		sleep(2)
 		# self.pressedPreviewButton()
 		#self.lblCamView.clear()
