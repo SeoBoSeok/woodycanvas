@@ -120,10 +120,12 @@ class MainWindow(QMainWindow, mainwindow_auto.Ui_MainWindow):
 		self.lblCamView.setPixmap(myScaledPixmap)
   	'''
    
-		self.lblCamView.clear()
-		myPixmap = QPixmap('/home/pi/woodycanvas/img/image.jpg')
-		myScaledPixmap = myPixmap.scaled(self.lblCamView.size(), Qt.KeepAspectRatio)
-		self.lblCamView.setPixmap(myScaledPixmap)
+		self.pressedPreviewButton()
+   
+		# self.lblCamView.clear()
+		# myPixmap = QPixmap('/home/pi/woodycanvas/img/image.jpg')
+		# myScaledPixmap = myPixmap.scaled(self.lblCamView.size(), Qt.KeepAspectRatio)
+		# self.lblCamView.setPixmap(myScaledPixmap)
   
 		sleep(2)
 		# self.pressedPreviewButton()
@@ -147,7 +149,8 @@ class MainWindow(QMainWindow, mainwindow_auto.Ui_MainWindow):
   
 		# self.pressedPreviewButton()
 		sleep(1)
-		self.controlTimer()
+		# self.controlTimer()
+		self.pressedPreviewButton()
 	#def runCommand(self):
         #pass
         #p = os.popen(command)
