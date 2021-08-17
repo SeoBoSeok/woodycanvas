@@ -135,7 +135,7 @@ class MainWindow(QMainWindow, mainwindow_auto.Ui_MainWindow):
 		print("capturing image")
 		self.p = QProcess()
 		#self.p.start("raspistill", ["-t", "2000", "-o", "testImage.jpg"])
-		self.p.start("raspistill", ["-roi","0.1, 0.1, 0.7, 0.7","-rot" ,"90" ,"-t", "18000", "-tl", "2000", "-o", "image_num_%03d_today.jpg", "&"])
+		self.p.start("raspistill", ["-roi","0.1, 0.1, 0.7, 0.7","-rot" ,"90" ,"-t", "18000", "-tl", "2000", "-o", "image_num_%03d_today.jpg"])
 		self.p.waitForFinished()
 		#sleep(10)
 		print("merge start")
