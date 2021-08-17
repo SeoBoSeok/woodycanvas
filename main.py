@@ -96,7 +96,7 @@ class MainWindow(QMainWindow, mainwindow_auto.Ui_MainWindow):
 	def pressedPreviewButton(self):
 		print("PreviewButton")
 		# self.liveView = False
-		# self.controlTimer()
+		self.controlTimer()
 		# sleep(1)
 		self.lblCamView.clear()
 		myPixmap = QPixmap('/home/pi/woodycanvas/img/image.jpg')
