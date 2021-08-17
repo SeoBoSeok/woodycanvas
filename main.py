@@ -20,7 +20,7 @@ class SplashScreen(QWidget):
   def __init__(self) -> None:
     super().__init__()
     self.setWindowTitle("WOODY CANVAS")
-    self.setFixedSize(600, 400)
+    self.setFixedSize(600, 500)
     self.setWindowFlag(Qt.FramelessWindowHint)
     self.setAttribute(Qt.WA_TranslucentBackground)
     
@@ -91,6 +91,7 @@ class SplashScreen(QWidget):
   
 # create class for our Raspberry Pi GUI
 class MainWindow(QMainWindow, mainwindow_auto.Ui_MainWindow):
+  
 # access variables inside of the UI's file
 	def pressedPreviewButton(self):
 		print("Pressed Preview!")
@@ -158,14 +159,15 @@ class MainWindow(QMainWindow, mainwindow_auto.Ui_MainWindow):
 	def controlTimer(self):
 			# self.lblCamView.clear()
 			# if timer is stopped
-			if not self.timer.isActive():
+			if not self.liveView:
 					# create video capture
 					self.cap = cv2.VideoCapture(0)
 					# start timer
-					self.timer.start(20)
+					self.timer.start(10)
 					# update control_bt text
 					# self.btnSnap.setText("stop")
 					# self.ui.control_bt.setText("Stop")
+					self.liveView = True
 			# if timer is started
 			else:
 					# stop timer
@@ -174,10 +176,13 @@ class MainWindow(QMainWindow, mainwindow_auto.Ui_MainWindow):
 					self.cap.release()
 					# update control_bt text
 					# self.ui.control_bt.setText("Start")
+					self.liveView = False
 					self.lblCamView.clear()
 	def __init__(self):
 		super(self.__class__, self).__init__()
 		self.setupUi(self) # gets defined in the UI file
+  
+		self.liveView = False
 
 		# create a timer
 		self.timer = QTimer()
@@ -232,8 +237,7 @@ def main():
 			}
    
 			#btnPreview {
-				width: 50px;
-				height: 50px;
+				
 			}
 	''')
   
