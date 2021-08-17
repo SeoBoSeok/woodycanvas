@@ -94,9 +94,9 @@ class MainWindow(QMainWindow, mainwindow_auto.Ui_MainWindow):
   
 # access variables inside of the UI's file
 	def pressedPreviewButton(self):
-		print("Pressed Preview!")
-		self.controlTimer()
-		sleep(1)
+		print("PreviewButton")
+		# self.controlTimer()
+		# sleep(1)
 		self.lblCamView.clear()
 		myPixmap = QPixmap('/home/pi/woodycanvas/img/image.jpg')
 		myScaledPixmap = myPixmap.scaled(self.lblCamView.size(), Qt.KeepAspectRatio)
@@ -109,8 +109,10 @@ class MainWindow(QMainWindow, mainwindow_auto.Ui_MainWindow):
 		# self.lblCamView.clear()
 
 	def pressedSettingsButton(self):
-		print("Settings pressed")
-		self.pressedPreviewButton()
+		print("Auto Settings pressed")
+		self.controlTimer()
+		sleep(1)
+		# self.pressedPreviewButton()
 		#self.lblCamView.clear()
 		#self.runCommand("raspistill -t 2000 -o image.jpg")
 		#os.system("raspistill -t 2000 -o image.jpg");
@@ -129,6 +131,7 @@ class MainWindow(QMainWindow, mainwindow_auto.Ui_MainWindow):
 		print("async End")
   
 		# self.pressedPreviewButton()
+		sleep(1)
 		self.controlTimer()
 	#def runCommand(self):
         #pass
@@ -195,7 +198,7 @@ class MainWindow(QMainWindow, mainwindow_auto.Ui_MainWindow):
 		# Tie buttons to clicks
 		self.btnSnap.clicked.connect(lambda: self.controlTimer())
 		self.btnPreview.clicked.connect(lambda: self.pressedPreviewButton())
-		self.btnSettings.clicked.connect(lambda: self.pressedSettingsButton())
+		self.btnSettings.clicked.connect(lambda: self.pressedSettingsButton()) # auto
 
 
 def main():
