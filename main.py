@@ -120,14 +120,18 @@ class MainWindow(QMainWindow, mainwindow_auto.Ui_MainWindow):
 		self.lblCamView.setPixmap(myScaledPixmap)
   	'''
    
-		self.pressedPreviewButton()
+		self.timer.stop()
+		self.cap.release()
+		self.lblCamView.clear()
+   
+		# self.pressedPreviewButton()
    
 		# self.lblCamView.clear()
 		# myPixmap = QPixmap('/home/pi/woodycanvas/img/image.jpg')
 		# myScaledPixmap = myPixmap.scaled(self.lblCamView.size(), Qt.KeepAspectRatio)
 		# self.lblCamView.setPixmap(myScaledPixmap)
   
-		sleep(2)
+		# sleep(2)
 		# self.pressedPreviewButton()
 		#self.lblCamView.clear()
 		#self.runCommand("raspistill -t 2000 -o image.jpg")
