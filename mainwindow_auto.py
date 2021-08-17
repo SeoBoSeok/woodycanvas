@@ -32,11 +32,11 @@ class Ui_MainWindow(object):
         self.horizontalLayout.addWidget(self.btnPreview)
         self.btnSnap = QtWidgets.QPushButton(self.horizontalLayoutWidget)
         self.btnSnap.setObjectName("btnSnap")
-        self.btnSnap.setStyleSheet("color: white;"
-                        "border: 2px solid white;"
-                        "font-size: 20px;"
-                        "border-radius: 10px;"
-                        )
+        # self.btnSnap.setStyleSheet("color: white;"
+        #                 "border: 2px solid white;"
+        #                 "font-size: 20px;"
+        #                 "border-radius: 10px;"
+        #                 )
         # self.btnSnap.resize(150, 150)
         # self.btnSnap.setMaximumHeight(150)
         self.horizontalLayout.addWidget(self.btnSnap)
