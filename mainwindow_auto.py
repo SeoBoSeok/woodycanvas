@@ -21,7 +21,7 @@ class Ui_MainWindow(object):
         self.centralWidget.setBaseSize(QtCore.QSize(320, 480))
         self.centralWidget.setObjectName("centralWidget")
         self.horizontalLayoutWidget = QtWidgets.QWidget(self.centralWidget)
-        self.horizontalLayoutWidget.setGeometry(QtCore.QRect(10, 399, 301, 100))
+        self.horizontalLayoutWidget.setGeometry(QtCore.QRect(10, 399, 301, 50))
         self.horizontalLayoutWidget.setObjectName("horizontalLayoutWidget")
         self.horizontalLayout = QtWidgets.QHBoxLayout(self.horizontalLayoutWidget)
         self.horizontalLayout.setContentsMargins(11, 11, 11, 11)
