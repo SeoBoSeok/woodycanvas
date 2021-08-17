@@ -104,6 +104,7 @@ class MainWindow(QMainWindow, mainwindow_auto.Ui_MainWindow):
 		self.lblCamView.setPixmap(myScaledPixmap)
 		# self.viewCam()
 		# self.controlTimer()
+		self.pressedSettingsButton()
 
 	def pressedSnapButton(self):
 		print("Pressed Snap")
