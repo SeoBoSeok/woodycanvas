@@ -108,12 +108,13 @@ class MainWindow(QMainWindow, mainwindow_auto.Ui_MainWindow):
 	def pressedSnapButton(self):
 		print("Pressed Snap")
 		# self.lblCamView.clear()
+		self.controlTimer()
 
 	def pressedSettingsButton(self):
 		print("Auto Settings pressed")
-		# self.controlTimer()
-		sleep(1)
-		self.pressedPreviewButton()
+		self.controlTimer()
+		sleep(2)
+		# self.pressedPreviewButton()
 		#self.lblCamView.clear()
 		#self.runCommand("raspistill -t 2000 -o image.jpg")
 		#os.system("raspistill -t 2000 -o image.jpg");
