@@ -123,6 +123,10 @@ class MainWindow(QMainWindow, mainwindow_auto.Ui_MainWindow):
 		self.timer.stop()
 		self.cap.release()
 		self.lblCamView.clear()
+  
+		myPixmap = QPixmap('/home/pi/woodycanvas/img/image.jpg')
+		myScaledPixmap = myPixmap.scaled(self.lblCamView.size(), Qt.KeepAspectRatio)
+		self.lblCamView.setPixmap(myScaledPixmap)
    
 		# self.pressedPreviewButton()
    
