@@ -2,6 +2,7 @@
 import sys
 import os
 from time import sleep
+import subprocess
 
 # This gets the Qt stuff
 import PyQt5
@@ -149,12 +150,16 @@ class MainWindow(QMainWindow, mainwindow_test4.Ui_MainWindow):
 		# self.p.waitForFinished()
 		#sleep(10)
 		print("merge start")
-		self.p = QProcess()
-		self.p.start("python3",  ["merge.py"])
-		self.p.waitForFinished()
+		#self.p = QProcess()
+		#self.p.start("python3",  ["merge.py"])
+		#self.p.waitForFinished()
+		subprocess.run(['python3', 'merge.py'], capture_output=True)
+		sleep(3)
 		print("merge end")
-		self.p.start("rsync",  ["-azvh", "/home/pi/test/picam/img/image.jpg", "/home/pi/pi-camera-stream-flask/static/"])
-		self.p.waitForFinished()
+		#self.p.start("rsync",  ["-azvh", "/home/pi/test/picam/img/image.jpg", "/home/pi/pi-camera-stream-flask/static/"])
+		#self.p.waitForFinished()
+		subprocess.run(['rsync', '-azvh', "/home/pi/test/picam/img/image.jpg", "/home/pi/pi-camera-stream-flask/static/"])
+		sleep(3)
 		print("async End")
   
 		# self.pressedPreviewButton()
