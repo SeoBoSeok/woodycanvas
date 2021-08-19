@@ -54,13 +54,6 @@ class SplashScreen(QWidget):
     self.labelDescription.setText("<strong>Working on Woody Module #1</strong>")
     self.labelDescription.setAlignment(Qt.AlignCenter)
     
-    self.labelLoading = QLabel(self.frame)
-    self.labelLoading.resize(self.width() - 10, 50)
-    self.labelLoading.move(0, self.progressBar.y() + 70)
-    self.labelLoading.setObjectName("LabelLoading")
-    self.labelLoading.setAlignment(Qt.AlignCenter)
-    self.labelLoading.setText('loading...')    
-    
     self.progressBar = QProgressBar(self.frame)
     self.progressBar.resize(self.width() - 200 - 10, 50)
     self.progressBar.move(100, self.labelDescription.y() + 130)
@@ -69,6 +62,13 @@ class SplashScreen(QWidget):
     self.progressBar.setTextVisible(True)
     self.progressBar.setRange(0, self.n)
     self.progressBar.setValue(20)
+    
+    self.labelLoading = QLabel(self.frame)
+    self.labelLoading.resize(self.width() - 10, 50)
+    self.labelLoading.move(0, self.progressBar.y() + 30)
+    self.labelLoading.setObjectName("LabelLoading")
+    self.labelLoading.setAlignment(Qt.AlignCenter)
+    self.labelLoading.setText('loading...')
   
   def loading(self):
     self.progressBar.setValue(self.counter)
