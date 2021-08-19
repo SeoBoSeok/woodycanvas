@@ -24,7 +24,7 @@ class Ui_MainWindow(object):
         self.centralWidget.setBaseSize(QtCore.QSize(320, 480))
         self.centralWidget.setObjectName("centralWidget")
         self.horizontalLayoutWidget = QtWidgets.QWidget(self.centralWidget)
-        self.horizontalLayoutWidget.setGeometry(QtCore.QRect(10, 590, 461, 81))
+        self.horizontalLayoutWidget.setGeometry(QtCore.QRect(10, 610, 461, 81))
         self.horizontalLayoutWidget.setObjectName("horizontalLayoutWidget")
         self.horizontalLayout_1 = QtWidgets.QHBoxLayout(self.horizontalLayoutWidget)
         self.horizontalLayout_1.setSizeConstraint(QtWidgets.QLayout.SetDefaultConstraint)
@@ -37,15 +37,14 @@ class Ui_MainWindow(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.btnPreview_4.sizePolicy().hasHeightForWidth())
         self.btnPreview_4.setSizePolicy(sizePolicy)
+        font = QtGui.QFont()
+        font.setPointSize(18)
+        self.btnPreview_4.setFont(font)
         self.btnPreview_4.setAutoFillBackground(False)
         self.btnPreview_4.setStyleSheet("background-color: rgba(0, 0, 0, 50);\n"
 "border: 2px solid white;\n"
 "border-radius: 20px;\n"
 "color: white;")
-        self.btnPreview_4.setText("")
-        icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("../../../../Downloads/green_dot.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.btnPreview_4.setIcon(icon)
         self.btnPreview_4.setObjectName("btnPreview_4")
         self.horizontalLayout_1.addWidget(self.btnPreview_4)
         self.btnPreview_3 = QtWidgets.QPushButton(self.horizontalLayoutWidget)
@@ -55,6 +54,9 @@ class Ui_MainWindow(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.btnPreview_3.sizePolicy().hasHeightForWidth())
         self.btnPreview_3.setSizePolicy(sizePolicy)
+        font = QtGui.QFont()
+        font.setPointSize(18)
+        self.btnPreview_3.setFont(font)
         self.btnPreview_3.setStyleSheet("background-color: rgba(0, 0, 0, 50);\n"
 "border: 2px solid white;\n"
 "border-radius: 20px;\n"
@@ -235,6 +237,7 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        self.btnPreview_4.setText(_translate("MainWindow", "MENU"))
         self.btnPreview_3.setText(_translate("MainWindow", "3mm"))
         self.btnPreview_2.setText(_translate("MainWindow", "6mm"))
         self.btnPreview.setText(_translate("MainWindow", "400 feed"))
