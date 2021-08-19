@@ -49,6 +49,7 @@ class SplashScreen(QWidget):
     # self.lbl_img.resize(480, 350)
     # self.lbl_img.move(0, self.lbl_img.height())
     self.lbl_img.setScaledContents(1)
+    self.lbl_img.setObjectName('LogoImage')
     self.lbl_img.setAlignment(Qt.AlignCenter)
     
     self.labelTitle.resize(self.width() - 10, 150)
@@ -266,6 +267,11 @@ def main():
 			#LabelLoading {
 					font-size: 20px;
 					color: #e8e8eb;
+			}
+   
+			#LogoImage {
+				width: 400px;
+				height: 300px;
 			}
 
 			QFrame {
