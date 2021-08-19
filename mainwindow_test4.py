@@ -71,7 +71,7 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.btnPreview_2.sizePolicy().hasHeightForWidth())
         self.btnPreview_2.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
-        font.setPointSize(14)
+        font.setPointSize(13)
         self.btnPreview_2.setFont(font)
         self.btnPreview_2.setStyleSheet("background-color: rgba(0, 0, 0, 50);\n"
 "border: 2px solid white;\n"
@@ -87,7 +87,7 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.btnPreview.sizePolicy().hasHeightForWidth())
         self.btnPreview.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
-        font.setPointSize(14)
+        font.setPointSize(13)
         self.btnPreview.setFont(font)
         self.btnPreview.setStyleSheet("background-color: rgba(0, 0, 0, 50);\n"
 "border: 2px solid white;\n"
@@ -158,7 +158,7 @@ class Ui_MainWindow(object):
         palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.Window, brush)
         self.btnSnap.setPalette(palette)
         font = QtGui.QFont()
-        font.setPointSize(14)
+        font.setPointSize(13)
         self.btnSnap.setFont(font)
         self.btnSnap.setStyleSheet("background-color: rgba(0, 0, 0, 50);\n"
 "border: 2px solid white;\n"

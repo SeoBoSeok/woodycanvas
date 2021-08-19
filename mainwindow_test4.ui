@@ -139,7 +139,7 @@ color: white;</string>
        </property>
        <property name="font">
         <font>
-         <pointsize>14</pointsize>
+         <pointsize>13</pointsize>
         </font>
        </property>
        <property name="styleSheet">
@@ -166,7 +166,7 @@ color: white;</string>
        </property>
        <property name="font">
         <font>
-         <pointsize>14</pointsize>
+         <pointsize>13</pointsize>
         </font>
        </property>
        <property name="styleSheet">
@@ -362,7 +362,7 @@ color: white;</string>
        </property>
        <property name="font">
         <font>
-         <pointsize>14</pointsize>
+         <pointsize>13</pointsize>
         </font>
        </property>
        <property name="styleSheet">
