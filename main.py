@@ -143,7 +143,7 @@ class MainWindow(QMainWindow, mainwindow_test4.Ui_MainWindow):
 		#self.runCommand("raspistill -t 2000 -o image.jpg")
 		#os.system("raspistill -t 2000 -o image.jpg");
 		print("capturing image")
-		sleep(60)
+		# sleep(60)
 		# self.p = QProcess()
 		#self.p.start("raspistill", ["-t", "2000", "-o", "testImage.jpg"])
 		# self.p.start("raspistill", ["-roi","0.1, 0.1, 0.7, 0.7","-rot" ,"90" ,"-t", "18000", "-tl", "2000", "-o", "image_num_%03d_today.jpg"])
@@ -153,12 +153,12 @@ class MainWindow(QMainWindow, mainwindow_test4.Ui_MainWindow):
 		#self.p = QProcess()
 		#self.p.start("python3",  ["merge.py"])
 		#self.p.waitForFinished()
-		subprocess.Popen(['python3', 'merge.py'], capture_output=True)
+		subprocess.run(['python3', 'merge.py'], capture_output=True)
 		sleep(3)
 		print("merge end")
 		#self.p.start("rsync",  ["-azvh", "/home/pi/test/picam/img/image.jpg", "/home/pi/pi-camera-stream-flask/static/"])
 		#self.p.waitForFinished()
-		subprocess.Popen(['rsync', '-azvh', "/home/pi/test/picam/img/image.jpg", "/home/pi/pi-camera-stream-flask/static/"], capture_output=True)
+		subprocess.run(['rsync', '-azvh', "/home/pi/test/picam/img/image.jpg", "/home/pi/pi-camera-stream-flask/static/"], capture_output=True)
 		sleep(3)
 		print("async End")
   
