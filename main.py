@@ -44,7 +44,7 @@ class SplashScreen(QWidget):
     self.labelTitle = QLabel(self.frame)
     self.labelTitle.setObjectName('LabelTitle')
     
-    pixmap = QPixmap('./icons/logo.png')
+    pixmap = QPixmap('./icons/woody_logo.png')
     self.lbl_img = QLabel(self.frame)
     self.lbl_img.setPixmap(pixmap)
     # self.lbl_img.scaled(400, 405, QtCore.Qt.KeepAspectRatio)
