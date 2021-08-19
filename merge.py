@@ -10,7 +10,7 @@ def concat_images(image_paths, size, shape=None):
     images = [ImageOps.fit(image, size, Image.ANTIALIAS) 
               for image in images]
     images = [image.rotate(270) for image in images] # merge 전에 90 rotate
-    images = [image.crop((90, 90, 210, 210)) for image in images] # crop 30, 30, 70, 70
+    images = [image.crop((144, 270, 480, 800)) for image in images] # crop 30, 30, 70, 70
     
     # Create canvas for the final image with total size
     shape = shape if shape else (1, len(images))
