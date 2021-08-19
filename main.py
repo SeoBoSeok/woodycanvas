@@ -137,7 +137,7 @@ class MainWindow(QMainWindow, mainwindow_test4.Ui_MainWindow):
 		# myScaledPixmap = myPixmap.scaled(self.lblCamView.size(), Qt.KeepAspectRatio)
 		# self.lblCamView.setPixmap(myScaledPixmap)
   
-		sleep(2)
+		# sleep(2)
 		# self.pressedPreviewButton()
 		#self.lblCamView.clear()
 		#self.runCommand("raspistill -t 2000 -o image.jpg")
@@ -163,9 +163,9 @@ class MainWindow(QMainWindow, mainwindow_test4.Ui_MainWindow):
 		#sleep(3)
 		print("async End")
   
-		# self.pressedPreviewButton()
+		self.pressedPreviewButton()
 		#sleep(1)
-		self.controlTimer()
+		# self.controlTimer()
 		# self.pressedPreviewButton()
 	#def runCommand(self):
         #pass
