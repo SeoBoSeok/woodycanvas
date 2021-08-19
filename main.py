@@ -262,7 +262,6 @@ def main():
 
 			QFrame {
 					background-color: white;
-					color: rgb(220, 220, 220);
 			}
 
 			QProgressBar {
