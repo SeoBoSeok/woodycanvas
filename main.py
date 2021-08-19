@@ -20,7 +20,7 @@ class SplashScreen(QWidget):
   def __init__(self) -> None:
     super().__init__()
     self.setWindowTitle("WOODY CANVAS")
-    self.setFixedSize(380, 500)
+    self.setFixedSize(460, 500)
     self.setWindowFlag(Qt.FramelessWindowHint)
     self.setAttribute(Qt.WA_TranslucentBackground)
     
@@ -142,7 +142,7 @@ class MainWindow(QMainWindow, mainwindow_test4.Ui_MainWindow):
 		#self.runCommand("raspistill -t 2000 -o image.jpg")
 		#os.system("raspistill -t 2000 -o image.jpg");
 		print("capturing image")
-		sleep(24)
+		sleep(60)
 		# self.p = QProcess()
 		#self.p.start("raspistill", ["-t", "2000", "-o", "testImage.jpg"])
 		# self.p.start("raspistill", ["-roi","0.1, 0.1, 0.7, 0.7","-rot" ,"90" ,"-t", "18000", "-tl", "2000", "-o", "image_num_%03d_today.jpg"])
