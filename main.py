@@ -43,6 +43,11 @@ class SplashScreen(QWidget):
     self.labelTitle = QLabel(self.frame)
     self.labelTitle.setObjectName('LabelTitle')
     
+    pixmap = QPixmap('./icons/logo.png')
+    lbl_img = QLabel(self.frame)
+    lbl_img.setPixmap(pixmap)
+    lbl_img.setAlignment(Qt.AlignCenter)
+    
     self.labelTitle.resize(self.width() - 10, 150)
     self.labelTitle.move(0, 40) # x, y
     self.labelTitle.setText("WOODY CANVAS")
