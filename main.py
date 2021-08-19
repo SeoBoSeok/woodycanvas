@@ -281,8 +281,8 @@ def main():
 			}
 
 			QProgressBar {
-					background-color: #DA7B93;
-					color: rgb(200, 200, 200);
+					background-color: white;
+					color: black;
 					border-style: none;
 					border-radius: 5px;
 					text-align: center;
