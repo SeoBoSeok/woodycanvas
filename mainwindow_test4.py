@@ -38,7 +38,7 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.btnPreview_4.sizePolicy().hasHeightForWidth())
         self.btnPreview_4.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
-        font.setPointSize(18)
+        font.setPointSize(15)
         self.btnPreview_4.setFont(font)
         self.btnPreview_4.setAutoFillBackground(False)
         self.btnPreview_4.setStyleSheet("background-color: rgba(0, 0, 0, 50);\n"
@@ -55,7 +55,7 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.btnPreview_3.sizePolicy().hasHeightForWidth())
         self.btnPreview_3.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
-        font.setPointSize(18)
+        font.setPointSize(15)
         self.btnPreview_3.setFont(font)
         self.btnPreview_3.setStyleSheet("background-color: rgba(0, 0, 0, 50);\n"
 "border: 2px solid white;\n"
@@ -70,6 +70,9 @@ class Ui_MainWindow(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.btnPreview_2.sizePolicy().hasHeightForWidth())
         self.btnPreview_2.setSizePolicy(sizePolicy)
+        font = QtGui.QFont()
+        font.setPointSize(15)
+        self.btnPreview_2.setFont(font)
         self.btnPreview_2.setStyleSheet("background-color: rgba(0, 0, 0, 50);\n"
 "border: 2px solid white;\n"
 "border-radius: 20px;\n"
@@ -83,6 +86,9 @@ class Ui_MainWindow(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.btnPreview.sizePolicy().hasHeightForWidth())
         self.btnPreview.setSizePolicy(sizePolicy)
+        font = QtGui.QFont()
+        font.setPointSize(15)
+        self.btnPreview.setFont(font)
         self.btnPreview.setStyleSheet("background-color: rgba(0, 0, 0, 50);\n"
 "border: 2px solid white;\n"
 "border-radius: 20px;\n"
@@ -151,6 +157,9 @@ class Ui_MainWindow(object):
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.Window, brush)
         self.btnSnap.setPalette(palette)
+        font = QtGui.QFont()
+        font.setPointSize(15)
+        self.btnSnap.setFont(font)
         self.btnSnap.setStyleSheet("background-color: rgba(0, 0, 0, 50);\n"
 "border: 2px solid white;\n"
 "border-radius: 20px;\n"
