@@ -80,7 +80,7 @@ class SplashScreen(QWidget):
     self.labelLoading.move(0, self.progressBar.y() + 70)
     self.labelLoading.setObjectName("LabelLoading")
     self.labelLoading.setAlignment(Qt.AlignCenter)
-    self.labelLoading.setText('loading...')
+    # self.labelLoading.setText('loading...')
   
   def loading(self):
     self.progressBar.setValue(self.counter)
