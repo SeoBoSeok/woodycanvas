@@ -11,6 +11,10 @@ src
 src/*
 img
 img/*
+images
+images/*
+output
+output/*
 
 bin
 bin/*

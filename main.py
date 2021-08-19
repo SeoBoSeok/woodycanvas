@@ -13,7 +13,7 @@ from PyQt5.QtCore import Qt, QProcess, QTimer
 import cv2
 
 # This is our window from QtCreator
-import mainwindow_auto
+import mainwindow_test4
 
 # Splash Screen
 class SplashScreen(QWidget):
@@ -90,7 +90,7 @@ class SplashScreen(QWidget):
     
   
 # create class for our Raspberry Pi GUI
-class MainWindow(QMainWindow, mainwindow_auto.Ui_MainWindow):
+class MainWindow(QMainWindow, mainwindow_test4.Ui_MainWindow):
   
 # access variables inside of the UI's file
 	def pressedPreviewButton(self):
@@ -175,6 +175,9 @@ class MainWindow(QMainWindow, mainwindow_auto.Ui_MainWindow):
 			# self.timer.start(20)
 			# read image in BGR format
 			ret, image = self.cap.read()
+			cimage = cv2.transpose(image)
+			image = cv2.flip(cimage, 1)
+   
 			# convert image to RGB format
 			image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 			# get image infos
