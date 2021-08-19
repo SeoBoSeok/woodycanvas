@@ -95,7 +95,7 @@ class MainWindow(QMainWindow, mainwindow_test4.Ui_MainWindow):
 # access variables inside of the UI's file
 	def pressedPreviewButton(self):
 		print("PreviewButton")
-		self.liveView = False
+		# self.liveView = False
 		self.controlTimer()
 		# sleep(1)
 		self.lblCamView.clear()
@@ -106,12 +106,12 @@ class MainWindow(QMainWindow, mainwindow_test4.Ui_MainWindow):
 		# self.controlTimer()
 		# self.pressedSettingsButton()
 
-	def pressedSettingsButton(self):
+	def pressedSnapButton(self):
 		print("Pressed Snap")
 		# self.lblCamView.clear()
-		# self.controlTimer()
+		self.controlTimer()
 
-	def pressedSnapButton(self):
+	def pressedSettingsButton(self):
 		print("Auto Settings pressed")
 
 		'''
@@ -236,22 +236,22 @@ def main():
 	app = QApplication(sys.argv)
 	app.setStyleSheet('''
 			#LabelTitle {
-					font-size: 40px;
+					font-size: 60px;
 					color: #93deed;
 			}
 
 			#LabelDesc {
-					font-size: 20px;
+					font-size: 30px;
 					color: #c2ced1;
 			}
 
 			#LabelLoading {
-					font-size: 20px;
+					font-size: 30px;
 					color: #e8e8eb;
 			}
 
 			QFrame {
-					background-color: white;
+					background-color: #2F4454;
 					color: rgb(220, 220, 220);
 			}
 
