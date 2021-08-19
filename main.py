@@ -49,7 +49,7 @@ class SplashScreen(QWidget):
     self.lbl_img.setPixmap(pixmap)
     # self.lbl_img.scaled(400, 405, QtCore.Qt.KeepAspectRatio)
     # self.lbl_img.resize(480, 350)
-    self.lbl_img.move(0, self.lbl_img.height())
+    self.lbl_img.move(20, 300)
     self.lbl_img.setScaledContents(1)
     self.lbl_img.setObjectName('LogoImage')
     self.lbl_img.setAlignment(Qt.AlignCenter)
@@ -68,7 +68,7 @@ class SplashScreen(QWidget):
     
     self.progressBar = QProgressBar(self.frame)
     self.progressBar.resize(self.width() - 200 - 10, 20)
-    self.progressBar.move(100, self.labelDescription.y() + 130)
+    self.progressBar.move(100, self.labelDescription.y() + 300)
     self.progressBar.setAlignment(Qt.AlignCenter)
     self.progressBar.setFormat('%p%')
     self.progressBar.setTextVisible(True)
