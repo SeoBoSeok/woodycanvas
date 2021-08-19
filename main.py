@@ -50,10 +50,10 @@ class SplashScreen(QWidget):
     self.lbl_img.move(0, self.lbl_img.height())
     self.lbl_img.setAlignment(Qt.AlignCenter)
     
-    # self.labelTitle.resize(self.width() - 10, 150)
-    # self.labelTitle.move(0, 40) # x, y
+    self.labelTitle.resize(self.width() - 10, 150)
+    self.labelTitle.move(0, 40) # x, y
     # self.labelTitle.setText("WOODY CANVAS")
-    # self.labelTitle.setAlignment(Qt.AlignCenter)
+    self.labelTitle.setAlignment(Qt.AlignCenter)
     
     self.labelDescription = QLabel(self.frame)
     self.labelDescription.resize(self.width() - 10, 50)
