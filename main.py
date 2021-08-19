@@ -46,6 +46,7 @@ class SplashScreen(QWidget):
     pixmap = QPixmap('./icons/logo.png')
     self.lbl_img = QLabel(self.frame)
     self.lbl_img.setPixmap(pixmap)
+    self.lbl_img.setScaledContents(1)
     self.lbl_img.resize(300, 150)
     self.lbl_img.move(0, self.lbl_img.height())
     self.lbl_img.setAlignment(Qt.AlignCenter)
