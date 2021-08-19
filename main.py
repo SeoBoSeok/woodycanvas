@@ -56,7 +56,7 @@ class SplashScreen(QWidget):
     self.labelDescription.setAlignment(Qt.AlignCenter)
     
     self.progressBar = QProgressBar(self.frame)
-    self.progressBar.resize(self.width() - 200 - 10, 50)
+    self.progressBar.resize(self.width() - 200 - 10, 20)
     self.progressBar.move(100, self.labelDescription.y() + 130)
     self.progressBar.setAlignment(Qt.AlignCenter)
     self.progressBar.setFormat('%p%')
@@ -65,7 +65,7 @@ class SplashScreen(QWidget):
     self.progressBar.setValue(20)
     
     self.labelLoading = QLabel(self.frame)
-    self.labelLoading.resize(self.width() - 10, 50)
+    self.labelLoading.resize(self.width() - 10, 30)
     self.labelLoading.move(0, self.progressBar.y() + 70)
     self.labelLoading.setObjectName("LabelLoading")
     self.labelLoading.setAlignment(Qt.AlignCenter)
