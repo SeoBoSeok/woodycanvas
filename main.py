@@ -95,8 +95,8 @@ class MainWindow(QMainWindow, mainwindow_test4.Ui_MainWindow):
 # access variables inside of the UI's file
 	def pressedPreviewButton(self):
 		print("PreviewButton")
-		# self.liveView = False
-		# self.controlTimer()
+		self.liveView = False
+		self.controlTimer()
 		# sleep(1)
 		self.lblCamView.clear()
 		myPixmap = QPixmap('/home/pi/test/picam/img/image.jpg')
