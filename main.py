@@ -246,22 +246,22 @@ def main():
 	app = QApplication(sys.argv)
 	app.setStyleSheet('''
 			#LabelTitle {
-					font-size: 60px;
-					color: #93deed;
+					font-size: 40px;
+					color: black;
 			}
 
 			#LabelDesc {
-					font-size: 30px;
+					font-size: 20px;
 					color: #c2ced1;
 			}
 
 			#LabelLoading {
-					font-size: 30px;
+					font-size: 20px;
 					color: #e8e8eb;
 			}
 
 			QFrame {
-					background-color: #2F4454;
+					background-color: white;
 					color: rgb(220, 220, 220);
 			}
 
@@ -269,13 +269,13 @@ def main():
 					background-color: #DA7B93;
 					color: rgb(200, 200, 200);
 					border-style: none;
-					border-radius: 10px;
+					border-radius: 5px;
 					text-align: center;
-					font-size: 30px;
+					font-size: 20px;
 			}
 
 			QProgressBar::chunk {
-					border-radius: 10px;
+					border-radius: 5px;
 					background-color: qlineargradient(spread:pad x1:0, x2:1, y1:0.511364, y2:0.523, stop:0 #1C3334, stop:1 #376E6F);
 			}
    
