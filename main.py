@@ -291,7 +291,7 @@ def main():
 
 			QProgressBar::chunk {
 					border-radius: 5px;
-					background-color: black;
+					background-color: qlineargradient(spread:pad x1:0, x2:1, y1:0.511364, y2:0.523, stop:0 #1C3334, stop:1 #376E6F);
 			}
    
 			#btnPreview {
