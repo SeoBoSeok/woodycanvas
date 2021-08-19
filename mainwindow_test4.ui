@@ -54,7 +54,7 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>670</y>
+      <y>590</y>
       <width>461</width>
       <height>81</height>
      </rect>
@@ -361,9 +361,9 @@ color: white;</string>
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>20</y>
+      <y>90</y>
       <width>461</width>
-      <height>41</height>
+      <height>51</height>
      </rect>
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout_2">
@@ -410,7 +410,7 @@ border-radius: 30px;
 color: white;</string>
        </property>
        <property name="text">
-        <string>X : 370mm</string>
+        <string>POSITION</string>
        </property>
       </widget>
      </item>
@@ -429,7 +429,7 @@ border-radius: 30px;
 color: white;</string>
        </property>
        <property name="text">
-        <string>Y : 250mm</string>
+        <string>WOOD</string>
        </property>
       </widget>
      </item>
@@ -448,7 +448,7 @@ border-radius: 30px;
 color: white;</string>
        </property>
        <property name="text">
-        <string>WOOD</string>
+        <string>SCAN</string>
        </property>
       </widget>
      </item>

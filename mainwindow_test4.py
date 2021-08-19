@@ -24,7 +24,7 @@ class Ui_MainWindow(object):
         self.centralWidget.setBaseSize(QtCore.QSize(320, 480))
         self.centralWidget.setObjectName("centralWidget")
         self.horizontalLayoutWidget = QtWidgets.QWidget(self.centralWidget)
-        self.horizontalLayoutWidget.setGeometry(QtCore.QRect(10, 670, 461, 81))
+        self.horizontalLayoutWidget.setGeometry(QtCore.QRect(10, 590, 461, 81))
         self.horizontalLayoutWidget.setObjectName("horizontalLayoutWidget")
         self.horizontalLayout_1 = QtWidgets.QHBoxLayout(self.horizontalLayoutWidget)
         self.horizontalLayout_1.setSizeConstraint(QtWidgets.QLayout.SetDefaultConstraint)
@@ -156,7 +156,7 @@ class Ui_MainWindow(object):
         self.btnSnap.setObjectName("btnSnap")
         self.horizontalLayout_1.addWidget(self.btnSnap)
         self.horizontalLayoutWidget_2 = QtWidgets.QWidget(self.centralWidget)
-        self.horizontalLayoutWidget_2.setGeometry(QtCore.QRect(10, 20, 461, 41))
+        self.horizontalLayoutWidget_2.setGeometry(QtCore.QRect(10, 90, 461, 51))
         self.horizontalLayoutWidget_2.setObjectName("horizontalLayoutWidget_2")
         self.horizontalLayout_2 = QtWidgets.QHBoxLayout(self.horizontalLayoutWidget_2)
         self.horizontalLayout_2.setContentsMargins(11, 11, 11, 11)
@@ -240,9 +240,9 @@ class Ui_MainWindow(object):
         self.btnPreview.setText(_translate("MainWindow", "400 feed"))
         self.btnSnap.setText(_translate("MainWindow", "GO"))
         self.btnSettings_4.setText(_translate("MainWindow", "SNAP"))
-        self.btnSettings_3.setText(_translate("MainWindow", "X : 370mm"))
-        self.btnSettings_2.setText(_translate("MainWindow", "Y : 250mm"))
-        self.btnSettings.setText(_translate("MainWindow", "WOOD"))
+        self.btnSettings_3.setText(_translate("MainWindow", "POSITION"))
+        self.btnSettings_2.setText(_translate("MainWindow", "WOOD"))
+        self.btnSettings.setText(_translate("MainWindow", "SCAN"))
 
 
 if __name__ == "__main__":
