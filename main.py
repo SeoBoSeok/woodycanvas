@@ -24,7 +24,7 @@ class SplashScreen(QWidget):
     self.setFixedSize(460, 500)
     self.setWindowFlag(Qt.FramelessWindowHint)
     self.setAttribute(Qt.WA_TranslucentBackground)
-    self.setGeometry(150, 10, 460, 500)
+    self.setGeometry(10, 150, 460, 500)
     
     self.counter = 0
     self.n = 300
