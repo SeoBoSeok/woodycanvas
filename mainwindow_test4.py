@@ -38,7 +38,7 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.btnPreview_4.sizePolicy().hasHeightForWidth())
         self.btnPreview_4.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
-        font.setPointSize(14)
+        font.setPointSize(13)
         self.btnPreview_4.setFont(font)
         self.btnPreview_4.setAutoFillBackground(False)
         self.btnPreview_4.setStyleSheet("background-color: rgba(0, 0, 0, 50);\n"
@@ -55,7 +55,7 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.btnPreview_3.sizePolicy().hasHeightForWidth())
         self.btnPreview_3.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
-        font.setPointSize(14)
+        font.setPointSize(13)
         self.btnPreview_3.setFont(font)
         self.btnPreview_3.setStyleSheet("background-color: rgba(0, 0, 0, 50);\n"
 "border: 2px solid white;\n"
