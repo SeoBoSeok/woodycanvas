@@ -261,7 +261,7 @@ def main():
 			}
 
 			QFrame {
-					background-color: rgba(255, 255, 255, 0);
+					background-color: rgba(0, 0, 0, 100);
 					color: rgb(220, 220, 220);
 			}
 
