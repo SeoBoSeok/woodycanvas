@@ -96,22 +96,22 @@ class MainWindow(QMainWindow, mainwindow_test4.Ui_MainWindow):
 	def pressedPreviewButton(self):
 		print("PreviewButton")
 		# self.liveView = False
-		self.controlTimer()
+		# self.controlTimer()
 		# sleep(1)
 		self.lblCamView.clear()
-		myPixmap = QPixmap('/home/pi/woodycanvas/img/image.jpg')
+		myPixmap = QPixmap('/home/pi/test/picam/img/image.jpg')
 		myScaledPixmap = myPixmap.scaled(self.lblCamView.size(), Qt.KeepAspectRatio)
 		self.lblCamView.setPixmap(myScaledPixmap)
 		# self.viewCam()
 		# self.controlTimer()
 		# self.pressedSettingsButton()
 
-	def pressedSnapButton(self):
+	def pressedSettingsButton(self):
 		print("Pressed Snap")
 		# self.lblCamView.clear()
-		self.controlTimer()
+		# self.controlTimer()
 
-	def pressedSettingsButton(self):
+	def pressedSnapButton(self):
 		print("Auto Settings pressed")
 
 		'''
@@ -125,7 +125,7 @@ class MainWindow(QMainWindow, mainwindow_test4.Ui_MainWindow):
 		self.cap.release()
 		self.lblCamView.clear()
   
-		myPixmap = QPixmap('/home/pi/woodycanvas/img/image.jpg')
+		myPixmap = QPixmap('/home/pi/test/picam/img/image.jpg')
 		myScaledPixmap = myPixmap.scaled(self.lblCamView.size(), Qt.KeepAspectRatio)
 		self.lblCamView.setPixmap(myScaledPixmap)
    
