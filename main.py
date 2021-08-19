@@ -236,22 +236,22 @@ def main():
 	app = QApplication(sys.argv)
 	app.setStyleSheet('''
 			#LabelTitle {
-					font-size: 60px;
+					font-size: 40px;
 					color: #93deed;
 			}
 
 			#LabelDesc {
-					font-size: 30px;
+					font-size: 20px;
 					color: #c2ced1;
 			}
 
 			#LabelLoading {
-					font-size: 30px;
+					font-size: 20px;
 					color: #e8e8eb;
 			}
 
 			QFrame {
-					background-color: #2F4454;
+					background-color: white;
 					color: rgb(220, 220, 220);
 			}
 
