@@ -18,12 +18,7 @@ class Ui_MainWindow(object):
         MainWindow.setMinimumSize(QtCore.QSize(320, 480))
         MainWindow.setMaximumSize(QtCore.QSize(480, 800))
         MainWindow.setBaseSize(QtCore.QSize(320, 480))
-        MainWindow.setStyleSheet("""
-                                        QPushButton:hover {
-				                background-color: #86BC26;
-                                        }
-                                 
-                                 """)
+        MainWindow.setStyleSheet("")
         self.centralWidget = QtWidgets.QWidget(MainWindow)
         self.centralWidget.setMinimumSize(QtCore.QSize(320, 480))
         self.centralWidget.setMaximumSize(QtCore.QSize(480, 800))
@@ -225,13 +220,15 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.btnSettings.sizePolicy().hasHeightForWidth())
         self.btnSettings.setSizePolicy(sizePolicy)
         self.btnSettings.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.btnSettings.setContextMenuPolicy(QtCore.Qt.DefaultContextMenu)
-        self.btnSettings.setAcceptDrops(False)
-        self.btnSettings.setToolTip("")
+        self.btnSettings.setContextMenuPolicy(QtCore.Qt.ActionsContextMenu)
+        self.btnSettings.setAcceptDrops(True)
         self.btnSettings.setStyleSheet("background-color: rgba(0, 0, 0, 70);\n"
 "border: 2px solid white;\n"
 "border-radius: 30px;\n"
-"color: white;")
+"color: white;\n"
+"QPushButton:hover#btnSettings {\n"
+"background-color: green;\n"
+"}")
         self.btnSettings.setCheckable(True)
         self.btnSettings.setChecked(True)
         self.btnSettings.setAutoRepeat(False)
@@ -272,6 +269,7 @@ class Ui_MainWindow(object):
         self.btnSettings_4.setText(_translate("MainWindow", "SNAP"))
         self.btnSettings_3.setText(_translate("MainWindow", "POSITION"))
         self.btnSettings_2.setText(_translate("MainWindow", "WOOD"))
+        self.btnSettings.setToolTip(_translate("MainWindow", "SCAN"))
         self.btnSettings.setText(_translate("MainWindow", "SCAN"))
 
 
