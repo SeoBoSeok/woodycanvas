@@ -220,14 +220,18 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.btnSettings.sizePolicy().hasHeightForWidth())
         self.btnSettings.setSizePolicy(sizePolicy)
         self.btnSettings.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.btnSettings.setContextMenuPolicy(QtCore.Qt.ActionsContextMenu)
-        self.btnSettings.setAcceptDrops(True)
+        self.btnSettings.setContextMenuPolicy(QtCore.Qt.DefaultContextMenu)
+        self.btnSettings.setAcceptDrops(False)
+        self.btnSettings.setToolTip("")
         self.btnSettings.setStyleSheet("background-color: rgba(0, 0, 0, 70);\n"
 "border: 2px solid white;\n"
 "border-radius: 30px;\n"
 "color: white;\n"
-"QPushButton:hover#btnSettings {\n"
-"background-color: green;\n"
+"QPushButton {\n"
+"    \n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: green;\n"
 "}")
         self.btnSettings.setCheckable(True)
         self.btnSettings.setChecked(True)
@@ -269,7 +273,6 @@ class Ui_MainWindow(object):
         self.btnSettings_4.setText(_translate("MainWindow", "SNAP"))
         self.btnSettings_3.setText(_translate("MainWindow", "POSITION"))
         self.btnSettings_2.setText(_translate("MainWindow", "WOOD"))
-        self.btnSettings.setToolTip(_translate("MainWindow", "SCAN"))
         self.btnSettings.setText(_translate("MainWindow", "SCAN"))
 
 

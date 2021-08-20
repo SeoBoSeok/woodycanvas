@@ -157,7 +157,7 @@ class MainWindow(QMainWindow, mainwindow_test4.Ui_MainWindow):
 		#self.runCommand("raspistill -t 2000 -o image.jpg")
 		#os.system("raspistill -t 2000 -o image.jpg");
 		print("capturing image")
-		sleep(70)
+		sleep(50)
 		self.p.close()
 		#self.p = QProcess()
 		#self.p.start("raspistill", ["-t", "2000", "-o", "testImage.jpg"])

@@ -481,7 +481,13 @@ color: white;</string>
         <string notr="true">background-color: rgba(0, 0, 0, 70);
 border: 2px solid white;
 border-radius: 30px;
-color: white;</string>
+color: white;
+QPushButton {
+	
+}
+QPushButton:hover {
+	background-color: green;
+}</string>
        </property>
        <property name="text">
         <string>SCAN</string>
