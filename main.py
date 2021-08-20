@@ -298,7 +298,7 @@ def main():
 				
 			}
    
-			QPushButton:hover {
+			QPushButton#btnSettings:hover {
 				background-color: #86BC26;
 			}
 	''')
