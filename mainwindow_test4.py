@@ -18,9 +18,7 @@ class Ui_MainWindow(object):
         MainWindow.setMinimumSize(QtCore.QSize(320, 480))
         MainWindow.setMaximumSize(QtCore.QSize(480, 800))
         MainWindow.setBaseSize(QtCore.QSize(320, 480))
-        MainWindow.setStyleSheet("QPushButton#btnSettings:hover {\n"
-"                background-color: #86BC26;\n"
-"            }")
+        MainWindow.setStyleSheet("")
         self.centralWidget = QtWidgets.QWidget(MainWindow)
         self.centralWidget.setMinimumSize(QtCore.QSize(320, 480))
         self.centralWidget.setMaximumSize(QtCore.QSize(480, 800))
@@ -221,10 +219,17 @@ class Ui_MainWindow(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.btnSettings.sizePolicy().hasHeightForWidth())
         self.btnSettings.setSizePolicy(sizePolicy)
+        self.btnSettings.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.btnSettings.setContextMenuPolicy(QtCore.Qt.DefaultContextMenu)
+        self.btnSettings.setAcceptDrops(False)
+        self.btnSettings.setToolTip("")
         self.btnSettings.setStyleSheet("background-color: rgba(0, 0, 0, 70);\n"
 "border: 2px solid white;\n"
 "border-radius: 30px;\n"
 "color: white;")
+        self.btnSettings.setCheckable(True)
+        self.btnSettings.setChecked(True)
+        self.btnSettings.setAutoRepeat(False)
         self.btnSettings.setAutoDefault(False)
         self.btnSettings.setFlat(False)
         self.btnSettings.setObjectName("btnSettings")
@@ -234,6 +239,9 @@ class Ui_MainWindow(object):
         self.lblCamView.setMinimumSize(QtCore.QSize(320, 460))
         self.lblCamView.setMaximumSize(QtCore.QSize(480, 800))
         self.lblCamView.setBaseSize(QtCore.QSize(480, 800))
+        self.lblCamView.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
+        self.lblCamView.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.lblCamView.setFrameShadow(QtWidgets.QFrame.Raised)
         self.lblCamView.setText("")
         self.lblCamView.setAlignment(QtCore.Qt.AlignCenter)
         self.lblCamView.setObjectName("lblCamView")

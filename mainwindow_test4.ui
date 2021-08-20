@@ -32,9 +32,7 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">QPushButton#btnSettings:hover {
-				background-color: #86BC26;
-			}</string>
+   <string notr="true"/>
   </property>
   <widget class="QWidget" name="centralWidget">
    <property name="minimumSize">
@@ -467,6 +465,18 @@ color: white;</string>
          <verstretch>0</verstretch>
         </sizepolicy>
        </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="contextMenuPolicy">
+        <enum>Qt::DefaultContextMenu</enum>
+       </property>
+       <property name="acceptDrops">
+        <bool>false</bool>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgba(0, 0, 0, 70);
 border: 2px solid white;
@@ -475,6 +485,15 @@ color: white;</string>
        </property>
        <property name="text">
         <string>SCAN</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+       <property name="autoRepeat">
+        <bool>false</bool>
        </property>
        <property name="autoDefault">
         <bool>false</bool>
@@ -512,6 +531,15 @@ color: white;</string>
       <width>480</width>
       <height>800</height>
      </size>
+    </property>
+    <property name="contextMenuPolicy">
+     <enum>Qt::NoContextMenu</enum>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
     </property>
     <property name="text">
      <string/>
