@@ -18,6 +18,9 @@ class Ui_MainWindow(object):
         MainWindow.setMinimumSize(QtCore.QSize(320, 480))
         MainWindow.setMaximumSize(QtCore.QSize(480, 800))
         MainWindow.setBaseSize(QtCore.QSize(320, 480))
+        MainWindow.setStyleSheet("QPushButton#btnSettings:hover {\n"
+"                background-color: #86BC26;\n"
+"            }")
         self.centralWidget = QtWidgets.QWidget(MainWindow)
         self.centralWidget.setMinimumSize(QtCore.QSize(320, 480))
         self.centralWidget.setMaximumSize(QtCore.QSize(480, 800))
@@ -222,6 +225,8 @@ class Ui_MainWindow(object):
 "border: 2px solid white;\n"
 "border-radius: 30px;\n"
 "color: white;")
+        self.btnSettings.setAutoDefault(False)
+        self.btnSettings.setFlat(False)
         self.btnSettings.setObjectName("btnSettings")
         self.horizontalLayout_2.addWidget(self.btnSettings)
         self.lblCamView = QtWidgets.QLabel(self.centralWidget)
