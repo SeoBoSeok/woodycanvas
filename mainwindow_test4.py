@@ -18,7 +18,12 @@ class Ui_MainWindow(object):
         MainWindow.setMinimumSize(QtCore.QSize(320, 480))
         MainWindow.setMaximumSize(QtCore.QSize(480, 800))
         MainWindow.setBaseSize(QtCore.QSize(320, 480))
-        MainWindow.setStyleSheet("")
+        MainWindow.setStyleSheet("""
+                                        QPushButton:hover {
+				                background-color: #86BC26;
+                                        }
+                                 
+                                 """)
         self.centralWidget = QtWidgets.QWidget(MainWindow)
         self.centralWidget.setMinimumSize(QtCore.QSize(320, 480))
         self.centralWidget.setMaximumSize(QtCore.QSize(480, 800))
