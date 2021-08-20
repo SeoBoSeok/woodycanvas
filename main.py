@@ -297,6 +297,10 @@ def main():
 			#btnPreview {
 				
 			}
+   
+			QPushButton:hover {
+				background-color: #86BC26;
+			}
 	''')
   
 	splash = SplashScreen()
